@@ -1,6 +1,7 @@
 import 'package:get/get_navigation/src/routes/get_route.dart';
 import 'package:sample_app/Bindings/LoginBingding.dart';
 import 'package:sample_app/Bindings/TestListBinding.dart';
+import 'package:sample_app/pages/TestAddPage.dart';
 import 'package:sample_app/pages/TestListPage.dart';
 import 'package:sample_app/routes/routes.dart';
 
@@ -22,5 +23,6 @@ class Pages{
         binding: LoginBinding()
     ),
     GetPage(name: AppRoutes.result, page:()=> ResultPage()),
+    GetPage(name: AppRoutes.testAdd, page:()=> TestAddPage()),
   ];
 }

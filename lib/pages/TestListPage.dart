@@ -21,9 +21,33 @@ class TestListPage extends StatelessWidget {
       body: Container(
         child: Column(
           children: [
-            CustomTextField(
-                labelText: "Test nomi",
-                hintText: "Nomi")
+         Card(
+           color: Colors.pink,
+           child: ListTile(
+             title: Text("Matematikadan testlar to'plami"),
+             textColor: Colors.white,
+             subtitle: Text("Bu test abitruyentlar uchun"),
+             onTap: (){
+               Get.toNamed(AppRoutes.test);
+             },
+           ),
+         ),
+         Card(
+           color: Colors.pink,
+           child: ListTile(
+             title: Text("Matematikadan testlar to'plami"),
+             textColor: Colors.white,
+             subtitle: Text("Bu test abitruyentlar uchun"),
+           ),
+         ),
+         Card(
+           color: Colors.pink,
+           child: ListTile(
+             title: Text("Matematikadan testlar to'plami"),
+             textColor: Colors.white,
+             subtitle: Text("Bu test abitruyentlar uchun"),
+           ),
+         ),
           ],
         ),
       ),

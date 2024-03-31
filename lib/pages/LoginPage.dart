@@ -27,7 +27,7 @@ class LoginPage extends StatelessWidget {
                   Get.toNamed(AppRoutes.testList);
                 },),height: 70,),
                 TextButton(onPressed: (){
-                  Get.toNamed(AppRoutes.test);
+                  Get.toNamed(AppRoutes.signUp);
                 }, child: Text("Accountingiz yo'qmi?",style: TextStyle(
                   fontSize: 20
                 ),))

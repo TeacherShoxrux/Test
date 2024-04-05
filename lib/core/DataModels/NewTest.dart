@@ -1,8 +1,10 @@
+import 'package:get/get.dart';
+
 class NewTest {
   NewTest(){
     this.questions=<Questions>[Questions()];
   }
-
+  var quantity=1.obs;
   String testName ="";
   String content="";
   late List<Questions> questions;
@@ -30,6 +32,7 @@ class Questions {
 
 
    String? content="";
+    var quantity=1.obs;
    late List<Varinats> varinats;
    int timeAllowed=0;
 

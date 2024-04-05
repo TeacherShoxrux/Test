@@ -1,6 +1,7 @@
 import 'package:get/get_navigation/src/routes/get_route.dart';
 import 'package:sample_app/Bindings/LoginBingding.dart';
 import 'package:sample_app/Bindings/TestAddBindings.dart';
+import 'package:sample_app/Bindings/TestBinding.dart';
 import 'package:sample_app/Bindings/TestListBinding.dart';
 import 'package:sample_app/pages/SignUpPage.dart';
 import 'package:sample_app/pages/TestAddPage.dart';
@@ -19,16 +20,20 @@ class Pages{
         page:()=> const TestListPage(),
         binding: TestListBinding()
     ),
-    GetPage(name: AppRoutes.test, page:()=> const TestPage()),
+    GetPage(name: AppRoutes.test,
+        binding: TestBinding(),
+        page:()=> const TestPage()),
     GetPage(name: AppRoutes.login,
         page:()=> const LoginPage(),
-        binding: LoginBinding()
-    ),
-    GetPage(name: AppRoutes.result, page:()=> const ResultPage()),
+        binding: LoginBinding()),
+    GetPage(
+        name: AppRoutes.result,
+        page:()=> const ResultPage()),
     GetPage(
         name: AppRoutes.testAdd,
         page:()=> const TestAddPage(),
-        binding: TestAddBindings()),
-    GetPage(name: AppRoutes.signUp, page:()=> SignUpPage()),
+        binding: TestAddBindings()
+    ),
+    GetPage(name: AppRoutes.signUp, page:()=> const SignUpPage()),
   ];
 }

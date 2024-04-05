@@ -1,3 +1,5 @@
+import 'package:get/get.dart';
+
 class TestData {
   TestData({
      required this.testId,
@@ -47,6 +49,7 @@ class Questions {
      required this.content,
      required this.options,});
 
+
   factory Questions.fromJson(dynamic json) {
    var id = json['id'];
    var testId = json['testId'];
@@ -62,6 +65,7 @@ class Questions {
   final int id;
   final int testId;
   final String content;
+  var selectedOptionId = 0.obs;
   List<Options> options = [];
 
   Map<String, dynamic> toJson() {
@@ -79,9 +83,9 @@ class Questions {
 
 class Options {
   Options({
-    required   this.id,
-    required   this.questionId,
-    required   this.content,});
+    required this.id,
+    required this.questionId,
+    required this.content,});
 
  factory  Options.fromJson(dynamic json) {
    var id = json['id'];
